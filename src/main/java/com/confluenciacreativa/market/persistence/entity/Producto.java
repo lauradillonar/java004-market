@@ -28,6 +28,10 @@ public class Producto {
     @Column (columnDefinition = "TINYINT")
     private Boolean estado;
 
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria;
+
     public Integer getIdProducto() {
         return idProducto;
     }

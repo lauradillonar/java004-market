@@ -1,6 +1,7 @@
 package com.confluenciacreativa.market.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "CATEGORIAS")
@@ -15,6 +16,9 @@ public class Categoria {
 
     @Column(columnDefinition = "TINYINT")
     private Boolean estado;
+
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
 
     public Integer getIdCategoria() {
         return idCategoria;
