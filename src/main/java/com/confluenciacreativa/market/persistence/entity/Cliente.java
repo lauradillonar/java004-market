@@ -19,7 +19,7 @@ public class Cliente {
     @Column(name = "correo_electronico")
     private String correoElectronico;
 
-    @OneToMany(mappedBy = "clientes")
+    @OneToMany(mappedBy = "cliente")
     private List<Compra> compras;
 
     public String getIdCliente() {
