@@ -6,9 +6,12 @@ import com.confluenciacreativa.market.persistence.crud.CompraCrudRepository;
 import com.confluenciacreativa.market.persistence.entity.Compra;
 import com.confluenciacreativa.market.persistence.mapper.PurchaseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class CompraRepository implements PurchaseRepository {
 
     @Autowired
@@ -20,7 +23,7 @@ public class CompraRepository implements PurchaseRepository {
     @Override
     public List<Purchase> getAll() {
 
-        return mapper.toPurchases((List<Compra>) compraCrudRepository.findAll());
+        return mapper.toPurchases((List<Compra>)compraCrudRepository.findAll());
     }
 
     @Override

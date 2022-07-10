@@ -1,7 +1,6 @@
 package com.confluenciacreativa.market.domain.repository;
 
 import com.confluenciacreativa.market.domain.Purchase;
-
 import java.util.List;
 import java.util.Optional;
 

@@ -1,7 +1,5 @@
 package com.confluenciacreativa.market.persistence.entity;
 
-import ch.qos.logback.core.net.server.Client;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -18,7 +16,7 @@ public class Compra {
     @Column(name = "id_cliente")
     private String idCliente;
 
-    @Column(columnDefinition = "VARCHAR(45)")
+    @Column(columnDefinition = "DATETIME")
     private LocalDateTime fecha;
 
     @Column(name = "medio_pago")
