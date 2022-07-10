@@ -18,7 +18,7 @@ public class PurchaseService {
     }
 
     public Optional<List<Purchase>> getByClient(String clientId){
-        purchaseRepository.getByClient(clientId);
+        return purchaseRepository.getByClient(clientId);
     }
 
     public Purchase save(Purchase purchase){
